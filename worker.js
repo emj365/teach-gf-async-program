@@ -44,6 +44,10 @@ app.post('/consume', function (req, res) {
   res.send(`遵命`)
 })
 
+app.post('/github/issue', function (req, res) {
+  // 放入队列
+})
+
 app.listen(3000, function () {
   console.log('有什么好吃的发到 3000 端口!')
 })

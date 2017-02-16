@@ -4,11 +4,11 @@ const SECOND_IN_MS = 1000 * MS
 const MINUTE_IN_MS = 60 * SECOND_IN_MS / SPEED_X
 
 const TASKS = [
-  { name: '淘米', needMinutes: '3',  block: true,  priority: 1 },
-  { name: '洗菜', needMinutes: '5',  block: true,  priority: 3 },
-  { name: '煮饭', needMinutes: '30', block: false, priority: 2 },
-  { name: '抄菜', needMinutes: '10', block: true,  priority: 5 },
-  { name: '炖汤', needMinutes: '20', block: false, priority: 4 }
+  { name: '设计原型', needMinutes: '3',  block: true,  priority: 1 },
+  { name: '设计交互', needMinutes: '5',  block: true,  priority: 3 },
+  { name: 'UI部门制作', needMinutes: '30', block: false, priority: 2 },
+  { name: 'StringID', needMinutes: '10', block: true,  priority: 5 },
+  { name: '确认文字', needMinutes: '20', block: false, priority: 4 }
 ]
 
 let startTime
