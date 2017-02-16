@@ -4,12 +4,13 @@ const SECOND_IN_MS = 1000 * MS
 const MINUTE_IN_MS = 60 * SECOND_IN_MS / SPEED_X
 
 const TASKS = [
-  { name: '淘米', needMinutes: '3' },
-  { name: '洗菜', needMinutes: '5' },
-  { name: '煮饭', needMinutes: '30' },
-  { name: '抄菜', needMinutes: '10' },
-  { name: '炖汤', needMinutes: '20' }
+  { name: '淘米', needMinutes: '3',  block: true },
+  { name: '洗菜', needMinutes: '5',  block: true },
+  { name: '煮饭', needMinutes: '30', block: false },
+  { name: '抄菜', needMinutes: '10', block: true },
+  { name: '炖汤', needMinutes: '20', block: false }
 ]
+
 let startTime
 
 const log = function (taskName) {
@@ -28,11 +29,21 @@ const doBlockTask = function (taskName, needMinutes) {
   log(taskName)
 }
 
+const doNonBlockTask = function (taskName, needMinutes) {
+  setTimeout(function () {
+    log(taskName)
+  }, needMinutes * MINUTE_IN_MS)
+}
+
 const exec = function () {
   startTime = new Date()
   console.log(`start exec at ${startTime.toString()}`)
   for (task of TASKS) {
-    doBlockTask(task.name, task.needMinutes)
+    if (task.block) {
+      doBlockTask(task.name, task.needMinutes)
+    } else {
+      doNonBlockTask(task.name, task.needMinutes)
+    }
   }
 }
 
