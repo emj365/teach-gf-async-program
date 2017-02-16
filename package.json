@@ -1,0 +1,23 @@
+{
+  "name": "teach-gf-async-program",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "time node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emj365/teach-gf-async-program.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emj365/teach-gf-async-program/issues"
+  },
+  "homepage": "https://github.com/emj365/teach-gf-async-program#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
